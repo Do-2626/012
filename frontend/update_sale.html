@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تحديث بيع</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>تحديث بيع</h1>
+    <form id="update-sale-form">
+        <div class="form-group">
+            <label for="update-sale_id">كود البيع:</label>
+            <input type="text" id="update-sale_id" name="update-sale_id" required>
+        </div>
+        <div class="form-group">
+            <label for="update-name">اسم العميل:</label>
+            <input type="text" id="update-name" name="update-name">
+        </div>
+        <div class="form-group">
+            <label for="update-phone">هاتف العميل:</label>
+            <input type="text" id="update-phone" name="update-phone">
+        </div>
+        <div class="form-group">
+            <label for="update-chairs_number">عدد الكراسي:</label>
+            <input type="number" id="update-chairs_number" name="update-chairs_number">
+        </div>
+        <div class="form-group">
+            <label for="update-tables_number">عدد الترابيزات:</label>
+            <input type="number" id="update-tables_number" name="update-tables_number">
+        </div>
+        <div class="form-group">
+            <label for="update-other_products">منتجات أخرى:</label>
+            <textarea id="update-other_products" name="update-other_products"></textarea>
+        </div>
+        <div class="form-group">
+            <label for="update-discount">المقدم:</label>
+            <input type="number" id="update-discount" name="update-discount">
+        </div>
+        <div class="form-group">
+            <label for="update-total_amount">المبلغ:</label>
+            <input type="number" id="update-total_amount" name="update-total_amount">
+        </div>
+        <div class="form-group">
+            <label for="update-installments_number">عدد الاقساط:</label>
+            <input type="number" id="update-installments_number" name="update-installments_number">
+        </div>
+        <div class="form-group">
+            <label for="update-address">العنوان:</label>
+            <input type="text" id="update-address" name="update-address">
+        </div>
+        <div class="form-group">
+            <label for="update-notes">ملاحظات:</label>
+            <textarea id="update-notes" name="update-notes"></textarea>
+        </div>
+        <div class="form-group">
+            <label for="update-status">الحالة:</label>
+            <select id="update-status" name="update-status">
+                <option value="جديد">جديد</option>
+                <option value="جارى الدفع">جارى الدفع</option>
+                <option value="منتهي">منتهي</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="update-collected_installment_number">عدد الاقساط المحصلة:</label>
+            <input type="number" id="update-collected_installment_number" name="update-collected_installment_number">
+        </div>
+        <div class="form-group">
+            <label for="update-future_installments_total">اجمالى الاقساط القادمة:</label>
+            <input type="number" id="update-future_installments_total" name="update-future_installments_total">
+        </div>
+        <button type="submit">تحديث</button>
+        <div id="update-sale-error" class="error"></div>
+    </form>
+    <script src="update_sale.js"></script>
+</body>
+</html>
