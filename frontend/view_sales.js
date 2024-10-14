@@ -47,14 +47,14 @@ document.addEventListener('DOMContentLoaded', function () {
                   <td>${sale.collected_installment_number}</td>
                   <td>${sale.future_installments_total}</td>
                   <td>
-                    <a href="update_sale.html?sale_id=${sale.sale_id}" class="edit-button" data-sale-id="${sale.sale_id}">
-                      تعديل
-                    </a>
+                    <button class="update-button" data-sale-id="${sale.sale_id}">
+                        تعديل
+                    </button>
                     <a href="delete_sale.html?sale_id=${sale.sale_id}" class="delete-button" data-sale-id="${sale.sale_id}">
-                      حذف
+                        حذف
                     </a>
                     <button class="issue-receipt-button" data-sale-id="${sale.sale_id}">
-                      اصدار إيصال
+                        اصدار إيصال
                     </button>
                   </td>
                 </tr>
@@ -103,6 +103,14 @@ document.addEventListener('DOMContentLoaded', function () {
               .catch((error) => {
                 alert('حدث خطأ أثناء الاتصال بالخادم.');
               });
+          });
+        });
+
+        const updateButtons = document.querySelectorAll('.update-button');
+        updateButtons.forEach(button => {
+          button.addEventListener('click', function () {
+            const saleId = this.dataset.saleId;
+            window.location.href = `update_sale.html?sale_id=${saleId}`;
           });
         });
       })

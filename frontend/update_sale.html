@@ -73,5 +73,10 @@
         <div id="update-sale-error" class="error"></div>
     </form>
     <script src="update_sale.js"></script>
+    <script>
+      const urlParams = new URLSearchParams(window.location.search);
+      const saleId = urlParams.get('sale_id');
+      document.getElementById('update-sale_id').value = saleId; 
+    </script>
 </body>
 </html>
